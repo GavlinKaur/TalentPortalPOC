@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Prometheus Page</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    .main-timeline-section {
+      position: relative;
+      width: 100%;
+      margin: auto;
+    }
+
+    .main-timeline-section .timeline-start,
+    .main-timeline-section .timeline-end {
+      position: absolute;
+      background: #F2635F;
+      border-radius: 100px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+    }
+
+    .main-timeline-section .timeline-end {
+      right: 0px;
+    }
+
+    .main-timeline-section .conference-center-line {
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #F2635F;
+    }
+
+    .timeline-article {
+      width: 20%;
+      position: relative;
+      min-height: 300px;
+      float: right;
+    }
+
+    .timeline-article .content-date {
+      position: absolute;
+      top: 35%;
+      left: -30px;
+      font-size: 18px;
+    }
+
+    .timeline-article .meta-date {
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      background: #fff;
+      border: 1px solid #F2635F;
+    }
+
+    .timeline-article .content-box {
+      box-shadow: 2px 2px 4px 0px #c1c1c1;
+      border: 1px solid #F2635F;
+      border-radius: 5px;
+      background-color: #fff;
+      width: 180px;
+      position: absolute;
+      top: 60%;
+      left: -80px;
+      padding: 10px;
+    }
+
+    .timeline-article-top .content-box:before {
+      content: " ";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -20px;
+      border: 10px solid transparent;
+      border-bottom-color: #F2635F;
+    }
+
+    .timeline-article-bottom .content-date {
+      top: 59%;
+    }
+
+    .timeline-article-bottom .content-box {
+      top: 0%;
+    }
+
+    .timeline-article-bottom .content-box:before {
+      content: " ";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -20px;
+      border: 10px solid transparent;
+      border-top-color: #F2635F;
+    }
+
+
+    @media (max-width:460px) {
+      body {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body data-aos-easing="ease" data-aos-duration="1000" data-aos-delay="0"><button type="button"
+    class="mobile-nav-toggle d-lg-none"><i class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages header-scrolled" style="
+  padding: 10px 0;
+  background: rgb(243 245 250);
+">
+    <div class="container d-flex align-items-center" style="
+    /* height: 27px; */
+">
+
+      <h1 class="logo mr-auto">
+        Talent Program Portal
+      </h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class=""><a style="color:black" href="index.html">Home</a></li>
+          <li class="drop-down"><a style="color:black" href="">About</a>
+            <ul>
+              <li><a href="#">Organizing Committee</a></li>
+              <li><a href="#">Associate Editors</a></li>
+              <li><a href="#">New Program Request</a></li>
+              <li><a href="#">How It Works</a></li>
+            </ul>
+          </li>
+          <li class="drop-down"><a style="color:black" href="">Program</a>
+            <ul>
+              <li><a href="#">Prometheus Program</a></li>
+              <li><a href="#">EE3 Program</a></li>
+              <li><a href="#">LDP Program</a></li>
+              <li><a href="#">Ideathon Program</a></li>
+            </ul>
+          </li>
+          <li class="drop-down"><a style="color:black" href="">Events</a>
+            <ul>
+              <li><a href="#">Live Events</a></li>
+              <li><a href="#">Workshops</a></li>
+              <li><a href="#">Awards</a></li>
+              <li><a href="#">Challenges</a></li>
+              <li><a href="#">Sponsors</a></li>
+            </ul>
+          </li>
+          <li><a style="color:black" href="#contact">Contact Us</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+      <a href="#about" style="color:black" class="get-started-btn scrollto">Registration</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs" style="
+    background: #37517e;
+">
+      <div class="container" style="
+    /* background: #37517e; */
+">
+
+        <ol>
+          <li><a href="index.html" style="
+    color: white;
+">Home</a></li>
+          <li style="
+    color: white;
+">Prometheus Page</li>
+        </ol>
+        <h2 style="
+    color: white;
+">Prometheus Page</h2>
+        <h4 style="
+    color: white;
+"> Example Prometheus Page Public View</h4>
+        <a href="#" style="
+    color: yellow;
+">Program 2020-2021:: Due: 31:12:2020 [ days left | timer counter]</a>
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+
+    <div class="container">
+
+      <div class="container-scroller">
+        <!-- partial:partials/_navbar.html -->
+
+
+        <div class="container">
+          <ul class="nav nav-tabs">
+            <li class="nav-item active">
+              <a class="nav-link active" href="#">Landing Page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Historical Data View</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sponsors Lists</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Program At Glance</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Registration</a>
+            </li>
+
+          </ul>
+        </div>
+
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+
+          <div class="main-panel">
+            <div class="content-wrapper">
+              <!-- Page Title Header Starts-->
+
+              <!-- Page Title Header Ends-->
+
+              <div class="row">
+                <div class="col-md-8 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+
+                        <div
+                          class="col-lg-7 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+                          <div class="content">
+                            <h3>Prometheus Program</h3>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                              ut labore et
+                              dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                            </p>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                              ut labore et
+                              dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                            </p>
+                          </div>
+
+
+                        </div>
+
+                        <div class="col-lg-5 align-items-stretch order-1 order-lg-2 img aos-init aos-animate">
+                          <div class="portfolio-img"><img src="assets/img/women-skill.jpg" class="img-fluid" alt="">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between pb-3">
+                        <h4 class="card-title mb-0">Announcements</h4>
+                      </div>
+                      <ul class="timeline">
+                        <li class="timeline-item">
+                          <p class="timeline-content"><a href="#">Partcipants Selected</a></p><a href="#">
+                            <p class="event-time">23 Aug 2020</p>
+                          </a>
+                        </li><a href="#">
+                        </a>
+                        <li class="timeline-item"><a href="#">
+                          </a>
+                          <p class="timeline-content"><a href="#"></a><a href="#">Prometheus Program 2020-2021
+                              launched</a></p><a href="#">
+                            <p class="event-time">18 Aug 2020</p>
+                          </a>
+                        </li><a href="#">
+                        </a>
+                      </ul><a href="#">
+                      </a><a class="d-block mt-3" href="#">Show all</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                  <div class="card">
+                    <section class="main-timeline-section">
+                      <div class="timeline-start"></div>
+                      <div class="conference-center-line"></div>
+                      <div class="conference-timeline-content">
+                        <div class="timeline-article timeline-article-top">
+                          <div class="content-date">
+                            <span>30-01-2021</span>
+                          </div>
+                          <div class="meta-date"></div>
+                          <div class="content-box">
+                            <p>Prometheus 2020-2021 Program Ended</p>
+                          </div>
+                        </div>
+
+                        <div class="timeline-article timeline-article-bottom">
+                          <div class="content-date">
+                            <span>10-09-2020</span>
+                          </div>
+                          <div class="meta-date"></div>
+                          <div class="content-box">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+                          </div>
+                        </div>
+                        <div class="timeline-article timeline-article-top">
+                          <div class="content-date">
+                            <span>23-09-2020</span>
+                          </div>
+                          <div class="meta-date"></div>
+                          <div class="content-box">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p>
+                          </div>
+                        </div>
+
+                        <div class="timeline-article timeline-article-bottom">
+                          <div class="content-date">
+                            <span>10-09-2020</span>
+                          </div>
+                          <div class="meta-date"></div>
+                          <div class="content-box">
+                            <p>Prometheus Program 2020-2021 Launched</p>
+                            <p>Registration started ...</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="timeline-end"></div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 grid-margin stretch-card">
+                  <div class="card" style="
+    height: :111px;
+">
+                    <div class="card-body" style="
+    /* height: 261px; */
+">
+                      <h4 class="card-title mb-0">Recent Events</h4>
+                      <div class="d-flex py-2 border-bottom">
+                        <div class="wrapper">
+                          <small class="text-muted">Mar 14, 2020</small>
+                          <p class="font-weight-semibold text-gray mb-0">Application Open</p>
+                        </div>
+                        <small class="text-muted ml-auto">Edit event</small>
+                      </div>
+                      <div class="d-flex py-2 border-bottom">
+                        <div class="wrapper">
+                          <small class="text-muted">Mar 14, 2019</small>
+                          <p class="font-weight-semibold text-gray mb-0">Application Closed</p>
+                        </div>
+                        <small class="text-muted ml-auto">Edit event</small>
+                      </div>
+                      <div class="d-flex py-2 border-bottom">
+                        <div class="wrapper">
+                          <small class="text-muted">July 14, 2020</small>
+                          <p class="font-weight-semibold text-gray mb-0">Other Events</p>
+                        </div>
+                        <small class="text-muted ml-auto">Edit event</small>
+                      </div>
+
+                      <a class="d-block mt-5" href="#">Show all</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="d-flex justify-content-between pb-3">
+                        <h4 class="card-title mb-0">Timeline</h4>
+                        <p class="mb-0 text-muted">20 finished, 5 remaining</p>
+                      </div>
+                      <ul class="timeline">
+                        <li class="timeline-item">
+                          <p class="timeline-content"><a href="#">Brainstorming</a>meeting happended</p>
+                          <p class="event-time">Just now</p>
+                        </li>
+                        <li class="timeline-item">
+                          <p class="timeline-content"><a href="#">Ideas </a>selected</p>
+                          <p class="event-time">Just now</p>
+                        </li>
+                        <li class="timeline-item">
+                          <p class="timeline-content"><a href="#">Leads</a>review teh ideas</p>
+                          <p class="event-time">Just now</p>
+                        </li>
+
+                      </ul>
+                      <a class="d-block mt-3" href="#">Show all</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-4 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <h4 class="card-title mb-0">Sponsors Board </h4>
+                      <div class="table-responsive">
+                        <table class="table table-stretched">
+                          <thead>
+                            <tr>
+                              <th>Name</th>
+                              <th>Unit</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <p class="mb-1 text-dark font-weight-medium">Bagul Swami</p>
+                              </td>
+                              <td class="font-weight-medium">CPT</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <p class="mb-1 text-dark font-weight-medium">Vivek Srivastawai</p>
+                                Inc.
+                              </td>
+                              <td class="font-weight-medium">CPB</td>
+                            </tr>
+
+                          </tbody>
+                        </table>
+                      </div>
+                      <a class="d-block mt-3" href="#">Show all</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+
+                <div class="col-md-4">
+
+                </div>
+              </div>
+
+            </div>
+            <!-- content-wrapper ends -->
+            <!-- partial:partials/_footer.html -->
+            <footer class="footer">
+
+            </footer>
+            <!-- partial -->
+          </div>
+          <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+      </div>
+    </div>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Arsha</h3>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        © Copyright <strong><span>Arsha</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top" style="display: inline;"><i class="ri-arrow-up-line"></i></a>
+
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <nav class="mobile-nav d-lg-none">
+    <ul>
+      <li class="active"><a style="color:black" href="index.html">Home</a></li>
+      <li class="drop-down"><a style="color:black" href="">About</a>
+        <ul>
+          <li><a href="#">Organizing Committee</a></li>
+          <li><a href="#">Associate Editors</a></li>
+          <li><a href="#">New Program Request</a></li>
+          <li><a href="#">How It Works</a></li>
+        </ul>
+      </li>
+      <li class="drop-down"><a style="color:black" href="">Program</a>
+        <ul>
+          <li><a href="#">Prometheus Program</a></li>
+          <li><a href="#">EE3 Program</a></li>
+          <li><a href="#">LDP Program</a></li>
+          <li><a href="#">Ideathon Program</a></li>
+        </ul>
+      </li>
+      <li class="drop-down"><a style="color:black" href="">Events</a>
+        <ul>
+          <li><a href="#">Live Events</a></li>
+          <li><a href="#">Workshops</a></li>
+          <li><a href="#">Awards</a></li>
+          <li><a href="#">Challenges</a></li>
+          <li><a href="#">Sponsors</a></li>
+        </ul>
+      </li>
+      <li><a style="color:black" href="#contact">Contact Us</a></li>
+
+    </ul>
+  </nav>
+  <div class="mobile-nav-overly"></div>
+  <!-- plugins:js -->
+  <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+  <script src="assets/vendors/js/vendor.bundle.addons.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="assets/js/shared/off-canvas.js"></script>
+  <script src="assets/js/shared/misc.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="assets/js/demo_1/dashboard.js"></script>
+  <!-- End custom js for this page-->
+  <!-- inject:js -->
+  <script src="assets/js/shared/off-canvas.js"></script>
+  <script src="assets/js/shared/misc.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="assets/js/shared/chart.js"></script>
+  <!-- End custom js for this page-->
+
+  <link rel="stylesheet" href="assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="assets/vendors/iconfonts/ionicons/dist/css/ionicons.css">
+  <link rel="stylesheet" href="assets/vendors/iconfonts/flag-icon-css/css/flag-icon.min.css">
+  <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.addons.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+
+
+  <div class="jvectormap-tip"></div>
+</body>
+
+</html>

@@ -1,0 +1,4 @@
+// actionTypes.js
+export const CREATE_NEW_PROGRAM = 'CREATE_NEW_PROGRAM';
+export const FETCH_PROGRAMS = 'FETCH_PROGRAMS';
+export const FETCH_PROGRAM_BY_ID = 'FETCH_PROGRAMS';

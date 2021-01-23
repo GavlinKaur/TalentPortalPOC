@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Prometheus Page</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    .main-timeline-section {
+      position: relative;
+      width: 100%;
+      margin: auto;
+    }
+
+    .main-timeline-section .timeline-start,
+    .main-timeline-section .timeline-end {
+      position: absolute;
+      background: #F2635F;
+      border-radius: 100px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 30px;
+      height: 30px;
+    }
+
+    .main-timeline-section .timeline-end {
+      right: 0px;
+    }
+
+    .main-timeline-section .conference-center-line {
+      position: absolute;
+      width: 100%;
+      height: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #F2635F;
+    }
+
+    .timeline-article {
+      width: 20%;
+      position: relative;
+      min-height: 300px;
+      float: right;
+    }
+
+    .timeline-article .content-date {
+      position: absolute;
+      top: 35%;
+      left: -30px;
+      font-size: 18px;
+    }
+
+    .timeline-article .meta-date {
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      background: #fff;
+      border: 1px solid #F2635F;
+    }
+
+    .timeline-article .content-box {
+      box-shadow: 2px 2px 4px 0px #c1c1c1;
+      border: 1px solid #F2635F;
+      border-radius: 5px;
+      background-color: #fff;
+      width: 180px;
+      position: absolute;
+      top: 60%;
+      left: -80px;
+      padding: 10px;
+    }
+
+    .timeline-article-top .content-box:before {
+      content: " ";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: -20px;
+      border: 10px solid transparent;
+      border-bottom-color: #F2635F;
+    }
+
+    .timeline-article-bottom .content-date {
+      top: 59%;
+    }
+
+    .timeline-article-bottom .content-box {
+      top: 0%;
+    }
+
+    .timeline-article-bottom .content-box:before {
+      content: " ";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -20px;
+      border: 10px solid transparent;
+      border-top-color: #F2635F;
+    }
+
+
+    @media (max-width:460px) {
+      body {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages" style="
+  padding: 10px 0;
+">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo mr-auto" style="color: white;">
+        TPP
+      </h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li class="active"><a href="index.html">Home</a></li>
+          <li class="drop-down"><a href="">About</a>
+            <ul>
+              <li><a href="#">Organizing Committee</a></li>
+              <li><a href="#">Associate Editors</a></li>
+              <li><a href="#">New Program Request</a></li>
+              <li><a href="#">How It Works</a></li>
+            </ul>
+          </li>
+          <li class="drop-down"><a href="">Program</a>
+            <ul>
+              <li><a href="#">Prometheus Program</a></li>
+              <li><a href="#">EE3 Program</a></li>
+              <li><a href="#">LDP Program</a></li>
+              <li><a href="#">Ideathon Program</a></li>
+            </ul>
+          </li>
+          <li class="drop-down"><a href="">Events</a>
+            <ul>
+              <li><a href="#">Live Events</a></li>
+              <li><a href="#">Workshops</a></li>
+              <li><a href="#">Awards</a></li>
+              <li><a href="#">Challenges</a></li>
+              <li><a href="#">Sponsors</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact Us</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+      <a href="/nomination.html" class="get-started-btn scrollto">Submit your Nomination</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Nomination Page</li>
+        </ol>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+
+    <div class="container">
+
+      <div class="container-scroller">
+        <!-- partial:partials/_navbar.html -->
+
+
+
+
+        <!-- partial -->
+        <div class="container-fluid page-body-wrapper">
+
+          <div class="main-panel">
+            <div class="content-wrapper">
+              <!-- Page Title Header Starts-->
+
+              <!-- Page Title Header Ends-->
+
+              <div class="row">
+                <div class="row">
+                  <div class="col-md-12 grid-margin stretch-card">
+                    <div class="card">
+                      <div class="card-body">
+                        <div class="row">
+
+                          <div
+                            class="col-lg-12 d-flex flex-column justify-content-center align-items-stretch  order-2 order-lg-1">
+
+                            <div class="content">
+                              <h3>Who's Next</h3>
+                              <p>
+                                Now this year, Citi is looking for the best and boldest young leaders, creators and
+                                thinkers for our programs. Now is your chance to nominate innovators.
+                              </p>
+                              <div class="nomination__buttons" style="
+      display: flex;
+      flex-direction: column;
+      padding-top: 60px;
+  ">
+                                <div class="nomination__text" style="
+      font-size: 54.4px;
+      font-weight: 600;
+      letter-spacing: .36px;
+      text-align: center;
+      border-top: 1px solid #979797;
+      padding: 50px 0;
+  ">I want to nominate:</div><button type="button" class="nomination__self" style="
+      width: 308px;
+      margin: auto;
+      padding: 10px 0;
+      border: none;
+      outline: none;
+      padding: 0;
+      background: none;
+  "><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 312 312" style="enable-background:new 0 0 312 312"
+                                    xml:space="preserve">
+                                    <g id="Layer_2">
+                                      <circle class="st0" cx="156" cy="156" r="153.5" style="
+      fill: #fff;
+      stroke: #000;
+      stroke-width: 3;
+      stroke-miterlimit: 10;
+  "></circle>
+                                    </g>
+                                    <g id="Layer_3">
+                                      <rect x="0" y="142" class="st1" width="311" height="44.36" style="
+      fill: none;
+  "></rect><text transform="matrix(1 0 0 1 85.4238 168.625)" class="st2 st3" style="
+      font-size: 35.5px;
+      font-family: EuclidCircular;
+      font-weight: 600;
+  ">MYSELF</text>
+                                    </g>
+                                  </svg></button><button type="button" class="nomination__other" style="
+      width: 308px;
+      margin: auto;
+      padding: 10px 0;
+      border: none;
+      outline: none;
+      padding: 0;
+      background: none;
+  "><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    viewBox="0 0 312 312" style="enable-background:new 0 0 312 312"
+                                    xml:space="preserve">
+                                    <g id="Layer_2">
+                                      <circle class="st0" cx="156" cy="156" r="153.5" style="
+      fill: #fff;
+      stroke: #000;
+      stroke-width: 3;
+      stroke-miterlimit: 10;
+  "></circle>
+                                    </g>
+                                    <g id="Layer_3">
+                                      <rect x="0" y="126" class="st1" width="311" height="97" style="
+      fill: none;
+  "></rect><text transform="matrix(1 0 0 1 63.8223 152.625)">
+                                        <tspan x="0" y="0" class="st2 st3" style="
+      font-size: 35.5px;
+      font-family: EuclidCircular;
+      font-weight: 600;
+  ">SOMEONE </tspan>
+                                        <tspan x="49.93" y="42.6" class="st2 st3" style="
+      font-size: 35.5px;
+      font-family: EuclidCircular;
+      font-weight: 600;
+  ">ELSE</tspan>
+                                      </text>
+                                    </g>
+                                  </svg></button>
+                              </div>
+
+                            </div>
+
+
+                          </div>
+
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+            <!-- content-wrapper ends -->
+            <!-- partial:partials/_footer.html -->
+
+            <!-- partial -->
+          </div>
+          <!-- main-panel ends -->
+        </div>
+        <!-- page-body-wrapper ends -->
+      </div>
+    </div>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Arsha</h3>
+            <p>
+              A108 Adam Street <br>
+              New York, NY 535022<br>
+              United States <br><br>
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> info@example.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Social Networks</h4>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+            <div class="social-links mt-3">
+              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Arsha</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <!-- plugins:js -->
+  <script src="assets/vendors/js/vendor.bundle.base.js"></script>
+  <script src="assets/vendors/js/vendor.bundle.addons.js"></script>
+  <!-- endinject -->
+  <!-- Plugin js for this page-->
+  <!-- End plugin js for this page-->
+  <!-- inject:js -->
+  <script src="assets/js/shared/off-canvas.js"></script>
+  <script src="assets/js/shared/misc.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="assets/js/demo_1/dashboard.js"></script>
+  <!-- End custom js for this page-->
+  <!-- inject:js -->
+  <script src="assets/js/shared/off-canvas.js"></script>
+  <script src="assets/js/shared/misc.js"></script>
+  <!-- endinject -->
+  <!-- Custom js for this page-->
+  <script src="assets/js/shared/chart.js"></script>
+  <!-- End custom js for this page-->
+
+  <link rel="stylesheet" href="assets/vendors/iconfonts/mdi/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="assets/vendors/iconfonts/ionicons/dist/css/ionicons.css">
+  <link rel="stylesheet" href="assets/vendors/iconfonts/flag-icon-css/css/flag-icon.min.css">
+  <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="assets/vendors/css/vendor.bundle.addons.css">
+  <!-- endinject -->
+  <!-- plugin css for this page -->
+  <!-- End plugin css for this page -->
+</body>
+
+</html>
